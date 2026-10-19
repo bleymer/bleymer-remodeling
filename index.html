@@ -1,252 +1,481 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bleymer Remodeling & Handyman</title>
+<title>Bleymer Remodeling & Handyman</title>
 
-  <meta name="description" content="Bleymer Remodeling & Handyman - Pintura, pisos, paredes, gabinetes, reparaciones y mejoras para el hogar.">
-  <meta property="og:title" content="Bleymer Remodeling & Handyman">
-  <meta property="og:description" content="Calidad, responsabilidad, puntualidad y resultados. Servicios profesionales de remodelación y handyman.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://raw.githubusercontent.com/bleymer/bleymer-remodeling/main/ble ymer-cover.jpg">
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #172331;
+    line-height: 1.6;
+}
+
+header {
+    background: #101d2b;
+    width: 100%;
+}
+
+.top-bar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.language button {
+    border: 1px solid #c89b5a;
+    background: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.language button.active {
+    background: #c89b5a;
+}
+
+.hero {
+    width: 100%;
+    background: #101d2b;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+}
+
+nav {
+    background: #101d2b;
+    border-top: 1px solid rgba(255,255,255,.15);
+    border-bottom: 3px solid #c89b5a;
+}
+
+nav ul {
+    list-style: none;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #c89b5a;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.intro {
+    background: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.intro p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    color: #555;
+    font-size: 17px;
+}
+
+.gold {
+    color: #b58345;
+}
+
+.btn {
+    display: inline-block;
+    background: #b58345;
+    color: white;
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+}
+
+.btn:hover {
+    background: #8f682f;
+}
+
+section {
+    padding: 55px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.service {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.service-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    margin-bottom: 8px;
+}
+
+.service p {
+    color: #666;
+    font-size: 14px;
+}
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content p {
+    color: #555;
+    font-size: 17px;
+}
+
+.contact-box {
+    background: #101d2b;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 12px;
+}
+
+.contact-box h2 {
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #0b141e;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .top-bar {
+        flex-direction: column;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f6f2;
-      color: #182432;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #152332;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .logo {
-      width: 100%;
-      max-width: 1000px;
-      display: block;
-      margin: auto;
-      border-radius: 8px;
-    }
-
-    nav {
-      background: #101b27;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    .logo-text {
+        font-size: 16px;
     }
 
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
+        padding: 11px 12px;
+        font-size: 14px;
     }
 
-    .hero {
-      padding: 55px 20px;
-      text-align: center;
-      background: white;
+    .intro {
+        padding: 40px 18px;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 28px;
-      background: #b8874d;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 55px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 30px;
+    .intro h1 {
+        font-size: 28px;
     }
 
     .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .service {
-      background: white;
-      padding: 28px 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+    .service:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        grid-template-columns: 1fr;
     }
 
-    .service h3 {
-      margin-bottom: 10px;
-      color: #182432;
+    .service:last-child {
+        grid-column: auto;
     }
 
-    .contact {
-      background: #152332;
-      color: white;
-      text-align: center;
-      max-width: none;
+    .section-title {
+        font-size: 25px;
     }
-
-    .contact h2 {
-      color: white;
-    }
-
-    footer {
-      background: #0d1721;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <img src="https://raw.githubusercontent.com/bleymer/bleymer-remodeling/main/7F74AB61-A904-43D0-B7B0-2D4B5BABA131.png" alt="Bleymer Remodeling">
-  </header>
+<header>
 
-  <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+    <div class="top-bar">
 
-  <div class="hero">
-    <h1>Bleymer Remodeling & Handyman</h1>
-    <p>
-      Remodelación, pintura, pisos, paredes, gabinetes y reparaciones
-      para mejorar tu hogar.
-    </p>
+        <div class="logo-text">
+            BLEYMER REMODELING & HANDYMAN
+        </div>
 
-    <a class="button" href="#contacto">Solicitar presupuesto</a>
-  </div>
+        <div class="language">
+            <button id="englishBtn" class="active" onclick="setLanguage('en')">
+                🇺🇸 English
+            </button>
 
-  <section id="servicios">
-    <h2>Nuestros servicios</h2>
-
-    <div class="services">
-
-      <div class="service">
-        <h3>🎨 Pintura</h3>
-        <p>Pintura interior y exterior con acabados profesionales.</p>
-      </div>
-
-      <div class="service">
-        <h3>🏠 Pisos</h3>
-        <p>Instalación y renovación de diferentes tipos de pisos.</p>
-      </div>
-
-      <div class="service">
-        <h3>🧱 Paredes</h3>
-        <p>Reparación, acabado y renovación de paredes.</p>
-      </div>
-
-      <div class="service">
-        <h3>🚪 Gabinetes</h3>
-        <p>Renovación, pintura e instalación de gabinetes.</p>
-      </div>
-
-      <div class="service">
-        <h3>🔧 Reparaciones</h3>
-        <p>Trabajos de handyman y reparaciones generales del hogar.</p>
-      </div>
+            <button id="spanishBtn" onclick="setLanguage('es')">
+                🇪🇸 Español
+            </button>
+        </div>
 
     </div>
-  </section>
 
-  <section id="nosotros">
-    <h2>¿Por qué Bleymer?</h2>
+    <div class="hero">
+        <img
+        src="https://raw.githubusercontent.com/bleymer/bleymer-remodeling/main/7F74AB61-A904-43D0-B7B0-2D4B5BABA131.png"
+        alt="Bleymer Remodeling & Handyman">
+    </div>
 
-    <div class="services">
+    <nav>
+        <ul>
+            <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
+            <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
+            <li><a href="#about" data-en="About Us" data-es="Nosotros">About Us</a></li>
+            <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+        </ul>
+    </nav>
 
-      <div class="service">
-        <h3>Calidad</h3>
-        <p>Trabajamos buscando un resultado profesional y duradero.</p>
-      </div>
+</header>
 
-      <div class="service">
-        <h3>Responsabilidad</h3>
-        <p>Cuidamos tu hogar y cumplimos con nuestro trabajo.</p>
-      </div>
+<main>
 
-      <div class="service">
-        <h3>Puntualidad</h3>
-        <p>Valoramos tu tiempo y procuramos cumplir los compromisos.</p>
-      </div>
+<section class="intro" id="home">
 
-      <div class="service">
-        <h3>Resultados</h3>
-        <p>Nos enfocamos en que el trabajo final quede bien hecho.</p>
-      </div>
+    <div class="container">
+
+        <h1 data-en="Bleymer Remodeling & Handyman"
+            data-es="Bleymer Remodeling & Handyman">
+            Bleymer Remodeling & Handyman
+        </h1>
+
+        <p data-en="Quality remodeling, painting, flooring, walls, cabinets and handyman services for your home."
+           data-es="Remodelación, pintura, pisos, paredes, gabinetes y reparaciones de calidad para su hogar.">
+           Quality remodeling, painting, flooring, walls, cabinets and handyman services for your home.
+        </p>
+
+        <a href="#contact" class="btn"
+           data-en="GET A FREE ESTIMATE"
+           data-es="SOLICITAR PRESUPUESTO GRATIS">
+           GET A FREE ESTIMATE
+        </a>
 
     </div>
-  </section>
 
-  <section id="contacto" class="contact">
-    <h2>Solicita tu presupuesto</h2>
+</section>
 
-    <p>
-      ¿Tienes un proyecto de remodelación o reparación?
-      Contáctanos para hablar sobre tu proyecto.
-    </p>
+<section id="services">
 
-    <a class="button" href="mailto:TU-EMAIL-AQUI">
-      Enviar mensaje
-    </a>
-  </section>
+    <div class="container">
 
-  <footer>
-    <p>© 2026 Bleymer Remodeling & Handyman</p>
-    <p>Calidad • Responsabilidad • Puntualidad • Resultados</p>
-  </footer>
+        <h2 class="section-title"
+            data-en="Our Services"
+            data-es="Nuestros Servicios">
+            Our Services
+        </h2>
+
+        <div class="services">
+
+            <div class="service">
+                <div class="service-icon">🎨</div>
+                <h3 data-en="Painting" data-es="Pintura">Painting</h3>
+                <p data-en="Interior and exterior painting with professional finishes."
+                   data-es="Pintura interior y exterior con acabados profesionales.">
+                   Interior and exterior painting with professional finishes.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🏠</div>
+                <h3 data-en="Flooring" data-es="Pisos">Flooring</h3>
+                <p data-en="Installation and renovation of different types of flooring."
+                   data-es="Instalación y renovación de diferentes tipos de pisos.">
+                   Installation and renovation of different types of flooring.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🧱</div>
+                <h3 data-en="Walls" data-es="Paredes">Walls</h3>
+                <p data-en="Wall repairs, finishes and remodeling solutions."
+                   data-es="Reparación, acabados y soluciones para paredes.">
+                   Wall repairs, finishes and remodeling solutions.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🗄️</div>
+                <h3 data-en="Cabinets" data-es="Gabinetes">Cabinets</h3>
+                <p data-en="Cabinet installation, painting and updates for your home."
+                   data-es="Instalación, pintura y renovación de gabinetes para su hogar.">
+                   Cabinet installation, painting and updates for your home.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🔧</div>
+                <h3 data-en="Repairs" data-es="Reparaciones">Repairs</h3>
+                <p data-en="Reliable handyman services and home repairs."
+                   data-es="Servicios de handyman y reparaciones confiables para el hogar.">
+                   Reliable handyman services and home repairs.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <h2 class="section-title"
+            data-en="About Us"
+            data-es="Sobre Nosotros">
+            About Us
+        </h2>
+
+        <div class="about-content">
+
+            <p data-en="At Bleymer Remodeling & Handyman, we are committed to quality, responsibility, punctuality and excellent results. We take pride in helping homeowners improve their spaces with professional workmanship."
+               data-es="En Bleymer Remodeling & Handyman estamos comprometidos con la calidad, responsabilidad, puntualidad y excelentes resultados. Nos enorgullece ayudar a los propietarios a mejorar sus espacios con un trabajo profesional.">
+               At Bleymer Remodeling & Handyman, we are committed to quality, responsibility, punctuality and excellent results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2 data-en="Ready to Improve Your Home?"
+                data-es="¿Listo para mejorar su hogar?">
+                Ready to Improve Your Home?
+            </h2>
+
+            <p data-en="Contact Bleymer Remodeling & Handyman today for a free estimate."
+               data-es="Contácte a Bleymer Remodeling & Handyman para solicitar un presupuesto gratis.">
+               Contact Bleymer Remodeling & Handyman today for a free estimate.
+            </p>
+
+            <a href="mailto:" class="btn"
+               data-en="CONTACT US"
+               data-es="CONTÁCTANOS">
+               CONTACT US
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Bleymer Remodeling & Handyman —
+    <span data-en="Quality • Responsibility • Punctuality • Results"
+          data-es="Calidad • Responsabilidad • Puntualidad • Resultados">
+        Quality • Responsibility • Punctuality • Results
+    </span>
+</footer>
+
+<script>
+
+function setLanguage(language) {
+
+    document.querySelectorAll("[data-en]").forEach(function(element) {
+
+        element.textContent = element.getAttribute("data-" + language);
+
+    });
+
+    document.documentElement.lang = language;
+
+    document.getElementById("englishBtn").classList.remove("active");
+    document.getElementById("spanishBtn").classList.remove("active");
+
+    if (language === "en") {
+        document.getElementById("englishBtn").classList.add("active");
+    } else {
+        document.getElementById("spanishBtn").classList.add("active");
+    }
+
+}
+
+</script>
 
 </body>
 </html>
