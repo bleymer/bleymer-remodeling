@@ -451,7 +451,83 @@ footer {
         Quality • Responsibility • Punctuality • Results
     </span>
 </footer>
+<!-- FREE ESTIMATE FORM -->
+<div id="estimateModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:9999; overflow:auto; padding:30px 15px;">
 
+  <div style="max-width:550px; margin:auto; background:white; padding:25px; border-radius:15px; position:relative;">
+
+    <button type="button" onclick="closeEstimateForm()"
+      style="position:absolute; top:10px; right:15px; border:none; background:none; font-size:28px; cursor:pointer;">
+      ×
+    </button>
+
+    <h2 style="margin-top:0;">GET FREE ESTIMATE</h2>
+
+    <p>Please complete the form below and we will contact you.</p>
+
+    <form action="https://formsubmit.co/bleymerlopez54@gmail.com" method="POST">
+
+      <input type="hidden" name="_subject" value="New Free Estimate Request - Bleymer Remodeling">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>Name *</label>
+      <input type="text" name="Name" required
+        placeholder="Your name"
+        style="width:100%; padding:12px; margin:6px 0 15px; box-sizing:border-box;">
+
+      <label>Phone Number *</label>
+      <input type="tel" name="Phone" required
+        placeholder="443-985-4215"
+        style="width:100%; padding:12px; margin:6px 0 15px; box-sizing:border-box;">
+
+      <label>Address *</label>
+      <input type="text" name="Address" required
+        placeholder="Project address"
+        style="width:100%; padding:12px; margin:6px 0 15px; box-sizing:border-box;">
+
+      <label>Email (Optional)</label>
+      <input type="email" name="Email"
+        placeholder="Your email"
+        style="width:100%; padding:12px; margin:6px 0 15px; box-sizing:border-box;">
+
+      <label>Service Needed *</label>
+      <select name="Service" required
+        style="width:100%; padding:12px; margin:6px 0 15px; box-sizing:border-box;">
+
+        <option value="">Select a service</option>
+        <option value="Flooring">Flooring</option>
+        <option value="Remodeling">Remodeling</option>
+        <option value="Painting">Painting</option>
+        <option value="Handyman">Handyman</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Bathroom">Bathroom</option>
+        <option value="Other">Other</option>
+
+      </select>
+
+      <label>Project Description</label>
+        <label>Photos of the Project (Optional)</label>
+<input type="file" name="Photos" accept="image/*" multiple>
+      <textarea name="Description"
+        placeholder="Tell us about your project"
+        rows="5"
+        style="width:100%; padding:12px; margin:6px 0 15px; box-sizing:border-box;"></textarea>
+
+      <button type="submit" class="btn"
+        style="width:100%; padding:14px; cursor:pointer;">
+        REQUEST FREE ESTIMATE
+      </button>
+
+    </form>
+
+    <div style="margin-top:20px; text-align:center;">
+      <p><strong>Or contact us directly:</strong></p>
+      <p>📞 <a href="tel:4439854215">443-985-4215</a></p>
+      <p>✉️ <a href="mailto:bleymerlopez54@gmail.com">bleymerlopez54@gmail.com</a></p>
+    </div>
+
+  </div>
+</div>
 <script>
 
 function setLanguage(language) {
@@ -474,6 +550,20 @@ function setLanguage(language) {
     }
 
 }
+    function openEstimateForm() {
+        document.getElementById("estimateModal").style.display = "block";
+}
+
+function closeEstimateForm() {
+    document.getElementById("estimateModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById("estimateModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
 
 </script>
 
