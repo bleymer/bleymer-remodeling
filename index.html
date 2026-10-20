@@ -505,14 +505,20 @@ footer {
 
       </select>
 
-      <label>Project Description</label>
-        <label>Photos of the Project (Optional)</label>
-<input type="file" name="Photos" accept="image/*" multiple>
-      <textarea name="Description"
-        placeholder="Tell us about your project"
-        rows="5"
-        style="width:100%; padding:12px; margin:6px 0 15px; box-sizing:border-box;"></textarea>
+      <label>What do you need repaired? *</label>
+<textarea name="Description"
+    required
+    placeholder="Tell us what you need repaired"
+    rows="5"
+    style="width:100%; padding:12px; margin:6px 0 12px;"></textarea>
+       </textarea> 
 
+<label>Upload Photos of the Project (Optional)</label>
+<input type="file"
+    name="Photos"
+    accept="image/*"
+    multiple
+    style="width:100%; padding:12px; margin:6px 0 12px;">
       <button type="submit" class="btn"
         style="width:100%; padding:14px; cursor:pointer;">
         REQUEST FREE ESTIMATE
